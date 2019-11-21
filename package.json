@@ -1,0 +1,22 @@
+{
+  "name": "snbek",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "connect-image-optimus": "^0.1.3",
+    "cookie-parser": "~1.4.4",
+    "cors": "^2.8.5",
+    "custom-env": "^1.0.2",
+    "debug": "~2.6.9",
+    "express": "~4.16.1",
+    "express-session": "^1.17.0",
+    "morgan": "~1.9.1",
+    "nodemon": "^1.19.4",
+    "pg": "^7.13.0",
+    "random-token": "0.0.8"
+    }
+}
