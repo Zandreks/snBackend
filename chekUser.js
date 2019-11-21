@@ -1,7 +1,7 @@
 var db = require("./dbConect").client,
   queryBuild = require("./dbConect").queryBuild;
 
-async function chekUser(req, res, next) {
+var chekUser = async(req, res, next)=> {
   let { token, id } = req.body;
   try {
     let results = await db.query(
@@ -9,7 +9,7 @@ async function chekUser(req, res, next) {
         token
       ])
     );
-    let idUser = results.rows[0].idUser;
+    let idUser = results.rows.length>0? results.rows[0].idUser:"";
     if (id == idUser) {
       next();
     } else {
