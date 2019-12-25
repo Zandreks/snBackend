@@ -4,7 +4,7 @@ var chekUser = async (req, res, next) => {
     let { token, id } = req.body
     try {
         let results = await db.query(queryBuild('SELECT * FROM "UsersToken" WHERE "token" = $1 LIMIT 1', [token]))
-        let idUser = results.rows.length > 0 ? results.rows[0].idUser : null
+        let idUser = results.rows.length > 0 ? results.rows[0].idUser : ''
         if (id == idUser) {
             next()
         } else {
